@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const newtonServices = [
+    'Data Labelling',
+    'Data Management',
+    'Human in the loop',
+    'Active Learning'    
+    ]
+
+const tabActive = 'bg-primary px-3 py-2 m-1 text-white rounded-md opacity-40';
+const tabInactive = 'bg-primary px-3 py-2 m-1 text-white rounded-md opacity-40 opacity-50'
+---
+<Layout title="Newto AI">
+	<main class="text-slate-700">
+		<section class="mt-5 flex justify-between items-center">
+            <!-- hero section -->
+            <div class="text-center">
+                <!-- hero text -->
+                <h1 class="text-4xl font-bold">
+                    Annotate data 10x faster with AI
+                </h1>
+                <h2 class="text-lg">
+                    AI Platform for efficient labeling and dataset management
+                </h2>
+                <!-- stats -->
+                <div class="mt-10 text-primary flex justify-between ">
+                    <div>
+                        <p class="font-bold text-2xl">50%</p>
+                        <p>Labelling Speed</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-2xl">+25%</p>
+                        <p>Reduced Cost</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-2xl">+20%</p>
+                        <p>Accuracy</p>
+                    </div>
+                </div>
+
+                <div class="mt-10 text-center flex justify-center font-medium">
+                    <input class="bg-white rounded-l-full border-2 border-primary/80 pl-3 text-blue-500 focus:outline-none" type="email" placeholder="Email">
+                    <button class="bg-primary/80 hover:bg-primary py-5 px-5 rounded-r-3xl text-white transition-all ease-in-out duration-500 ">Request a Demo</button>
+                </div>
+            </div>
+
+            <div>
+                <img src="/hero_img.png" alt="Newton AI images">
+            </div>
+
+        </section>
+
+        <section class="mt-20">
+            <div class="flex flex-col">
+                <h2 class="text-2xl font-semibold text-center mb-10">Trusted By</h2>
+                <img src="/partners_icon.png" alt="partners">
+            </div>
+        </section>
+        
+        <section class="mt-20">
+            <div class="flex flex-col text-center justify-center">
+                <h2 class="text-2xl font-semibold text-center mb-10">Our Services</h2>
+                <div>
+                    {newtonServices.map(item => <button class="bg-primary px-3 py-2 m-1 text-white rounded-md" onclick="openItem({item})">{item}</button>)}
+                </div>        
+                <div class="border border-red-500 self-center">
+                    <img src="/hero_img.png" alt="">
+                </div>        
+            </div>
+        </section>
+
+
+
+        
+	</main>
+</Layout>
+
+
